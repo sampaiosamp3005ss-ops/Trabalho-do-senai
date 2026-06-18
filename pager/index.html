@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagem/ChatGPT Image 6 de abr. de 2026, 08_39_40 .ico" type="image/x-icon">
+    <title>Loja Gamer</title>
+
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="imagem/ChatGPT Image 6 de abr. de 2026, 08_39_40 .ico" alt="logo">
+        </div>
+
+        <div class="search-container">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+
+            <input type="text" id="buscar" placeholder="Digite os jogos que procura" class="search-input">
+        </div>
+
+        <!-- <div class="idioma">PT-BR</div> -->
+        <div class="usuario-logado">
+            <span><strong id="nomeDoUsuario">Jogador</strong></span>
+        </div>
+
+        <nav>
+            <a href="../intro.html">Sair</a>
+            <div class="dropdown">
+                <a class="dropbtn">Tipos</a>
+
+                <div class="dropdown-content">
+                    <a href="#" class="categoria" data-categoria="rpg">RPG</a>
+                    <a href="#" class="categoria" data-categoria="acao">Ação</a>
+                    <a href="#" class="categoria" data-categoria="fps">FPS</a>
+                    <a href="#" class="categoria" data-categoria="esporte">Esportes</a>
+                    <a href="#" class="categoria" data-categoria="todos">Todos</a>
+                </div>
+            </div>
+
+            <a href="#">Explorar</a>
+            <a href="#">Promoções</a>
+            <div class="theme-dropdown">
+                <button type="button" class="dropbtn theme-btn">Trocar tema</button>
+                <div class="theme-content">
+                    <button type="button" class="theme-option" data-theme="default">Padrão</button>
+                    <button type="button" class="theme-option" data-theme="purple">Roxo</button>
+                    <button type="button" class="theme-option" data-theme="green">Verde</button>
+                    <button type="button" class="theme-option" data-theme="blue">Azul</button>
+                    <button type="button" class="theme-option" data-theme="white">Branco</button>
+                </div>
+            </div>
+            <div class="cart-hover">
+
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
+                </a>
+
+                <div class="mini-carrinho">
+                    <h3>🛒<span> Carrinho</span></h3>
+
+                    <div class="itens-carrinho"></div>
+                    <div class="total-carrinho"></div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <div class="espço">
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+    </div>
+    <section class="destaque" id="top">
+
+
+        <!--   BANNER -->
+        <div class="carrossel">
+
+            <div class="moven">
+
+
+                <div class="banner">
+
+                    <img class="bimg" src="imagem/cod.jpg" alt="Banner">
+
+                    <div class="banner-info">
+
+
+                    </div>
+                </div>
+                <div class="banner">
+                    <img class="bimg" src="imagem/elden ring.jpg" alt="Banner">
+
+                    <div class="banner-info">
+
+
+                    </div>
+                </div>
+                <div class="banner">
+                    <img class="bimg" src="imagem/god of war.jpg" alt="Banner">
+
+                    <div class="banner-info">
+
+
+                    </div>
+                </div>
+                <div class="banner">
+                    <img class="bimg" src="imagem/fifa.jpg" alt="Banner">
+
+                    <div class="banner-info">
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- INFO LATERAL -->
+            <aside class="info">
+                <h2>🔥 Destaques</h2>
+
+                <div class="info-card">
+                    <img src="imagem/Stardew valley.jpg">
+                    <p>Avaliado</p>
+                </div>
+
+                <div class="info-card">
+                    <img src="imagem/Sekiro Shadows Die Twice.jpg">
+                    <p>Gameplay</p>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <div class="aviso" id="aviso-compra">
+
+        <h1 style="font-size: 16px; margin: 0;">
+            O jogo <span id="nome-jogo-aviso" style="color: var(--accent); font-weight: bold;"></span> foi adicionado ao
+            carrinho!
+        </h1>
+
+        <div class="barrar"></div>
+    </div>
+
+
+    <div class="layout">
+        CONTEÚDO PRINCIPAL
+        <main class="main">
+            <div class="main-header">
+                <div>
+                    <h2 id="titulo-jogos">Jogos</h2>
+                    <p class="resultado-contador">Mostrando todos os jogos</p>
+                </div>
+            </div>
+
+            <div class="games">
+
+                <div class="card" data-categoria="acao">
+                    <a href="pages/indexs.html" style="text-decoration: none; color: var(--text); ">
+                        <img src="imagem/Cyb.webp" alt="Cyberpunk 2077">
+                        <h3>Cyberpunk 2077</h3>
+                        <p>R$ 150</p>
+                    </a>
+                    <script src="../pager/pages/indexs.js"></script>
+                    <div class="estrelas-loja" data-jogo="cyberpunk2077"></div>
+                    <button type="button" class="btn-comprar">Comprar</button>
+
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <a href="pages2/indexs.html" style="text-decoration: none; color: var(--text); ">
+                        <img src="imagem/elden ring.jpg" alt="Elden Ring">
+                        <h3>Elden Ring</h3>
+                        <p>R$ 250</p>
+                    </a>
+                    <div class="estrelas-loja" data-jogo="eldenring"></div>
+                    <button type="button" class="btn-comprar">Comprar</button>
+
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <a href="pages3/indexs.html" style="text-decoration: none; color: var(--text); ">
+                        <img src="imagem/god of war.jpg" alt="God of War">
+                        <h3>God of War</h3>
+                        <p>R$ 199</p>
+                    </a>
+                    <div class="estrelas-loja" data-jogo="godofwar"></div>
+                    <button type="button" class="btn-comprar">Comprar</button>
+
+                </div>
+
+                <div class="card" data-categoria="fps">
+                    <a href="pages4/indexs.html" style="text-decoration: none; color: var(--text); ">
+                        <img src="imagem/Counter.jpg" alt="Counter-Strike 2">
+                        <h3>Counter-Strike 2</h3>
+                        <p>Gratis</p>
+                    </a>
+                    <div class="estrelas-loja" data-jogo="cs2"></div>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/Witcher3.jpg" alt="The Witcher 3">
+                    <h3>The Witcher 3</h3>
+                    <p>R$ 120</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/GTA5.jpg" alt="GTA V">
+                    <h3>GTA V</h3>
+                    <p>R$ 99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="fps">
+                    <img src="imagem/cod.jpg" alt="Call of Duty">
+                    <h3>Call of Duty</h3>
+                    <p>R$ 299</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="esporte">
+                    <img src="imagem/fifa.jpg" alt="EA Sports FC 24">
+                    <h3>EA Sports FC 24</h3>
+                    <p>R$ 249</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="aventura">
+                    <img src="imagem/hogwarts.jpg" alt="Hogwarts Legacy">
+                    <h3>Hogwarts Legacy</h3>
+                    <p>R$ 199</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/spiderman.jpg" alt="Spider-Man">
+                    <h3>Spider-Man</h3>
+                    <p>R$ 199</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/minecraft.jpg" alt="minecraft">
+                    <h3>Minecraft</h3>
+                    <p>R$ 99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="fps">
+                    <img src="imagem/valorande.jpg" alt="valorande">
+                    <h3>Valorant</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/Black Desert Online.jpg" alt="Black Desert">
+                    <h3>Black Desert</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/Final Fantasy XIV.webp" alt="Final Fantasy XIV">
+                    <h3>Final Fantasy</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/World of Warcraft.webp" alt="World of Warcraft">
+                    <h3>World of Warcraft</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/Lost Ark.jpg" alt="Lost Ark">
+                    <h3>Lost Ark</h3>
+                    <p>R$ 9.99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/Genshin Impact.webp" alt="Genshin Impact">
+                    <h3>Genshin Impact</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/zenless-zone-zero.jpg" alt="Zenless Zone Zero">
+                    <h3>Zenless Zone Zero</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/Honkai Star Rail.jpg" alt="Honkai: Star Rail">
+                    <h3>Honkai: Star Rail</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/honkai-impact-3rd.jpg" alt="Honkai Impact 3rd">
+                    <h3>Honkai Impact 3rd</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/tears-of-themis.png" alt="Tears of Themis">
+                    <h3>Tears of Themis</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="fps">
+                    <img src="imagem/Tom Clancy_s Rainbow Six Siege.jpg" alt="Tom Clancy's Rainbow Six Siege">
+                    <h3>Tom Clancy's Rainbow Six Siege</h3>
+                    <p>R$ 110,00 </p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="fps">
+                    <img src="imagem/Apex Legends.webp" alt="Apex Legends">
+                    <h3>Apex Legends</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="fps">
+                    <img src="imagem/Blood Strike.webp" alt="Blood Strike">
+                    <h3>Blood Strike</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="fps">
+                    <img src="imagem/Delta Force.png" alt="Delta Force">
+                    <h3>Delta Force</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="fps">
+                    <img src="imagem/Warfare III.jpg" alt="Warfare III.">
+                    <h3>Warfare III.</h3>
+                    <p>R$ 339,00</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/Doom Eternal.jpg" alt="Doom Eternal">
+                    <h3>Doom Eternal</h3>
+                    <p>R$ 250 ,00</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/The Elder Scrolls Online.webp" alt="The Elder Scrolls Online">
+                    <h3>The Elder Scrolls Online</h3>
+                    <p>R$ 15,37 </p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/Hades II.jpg" alt="Hades II">
+                    <h3>Hades II</h3>
+                    <p>R$ 89,95</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/Devil May Cry 5.jpg" alt="Devil May Cry 5">
+                    <h3>Devil May Cry 5</h3>
+                    <p>R$ 268,00</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="esporte">
+                    <img src="imagem/Rocket League.webp" alt="Rocket League">
+                    <h3>Rocket League</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="esporte">
+                    <img src="imagem/NBA 2K25.jpg" alt="NBA">
+                    <h3>NBA 2K25</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="esporte">
+                    <img src="imagem/F1 24.jpg" alt="F1 24">
+                    <h3>F1 24</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="esporte">
+                    <img src="imagem/Tony Hawk_s Pro Skater 1 + 2.jpg" alt="Tony Hawk's Pro Skater 1 + 2">
+                    <h3>Tony Hawk's Pro Skater 1 + 2</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="esporte">
+                    <img src="imagem/PGA Tour 2K23.jpg" alt="PGA Tour 2K23">
+                    <h3>PGA Tour 2K23</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="esporte">
+                    <img src="imagem/UFL.jpg" alt="UFL">
+                    <h3>UFL</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="esporte">
+                    <img src="imagem/Ultimate MMA.jpg" alt="Ultimate MMA">
+                    <h3>Ultimate MMA</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="fps">
+                    <img src="imagem/WW.jpg" alt="WW.jpg">
+                    <h3>Weird West</h3>
+                    <p> R$ 100 </p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/Eternal Sonata.png" alt="WW.jpg">
+                    <h3>Eternal Sonata</h3>
+                    <p> R$ 29 </p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/The Saboteur.jpg" alt="The Saboteur">
+                    <h3>The Saboteur</h3>
+                    <p>R$ 25</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/The Quarry.avif" alt="The Quarry">
+                    <h3>The Quarry</h3>
+                    <p>R$ 125</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="fps">
+                    <img src="imagem/Shambles.jpg" alt="Shambles">
+                    <h3>Shambles</h3>
+                    <p>R$ 100.21</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/hollow knight.jpg" alt="hollow knight">
+                    <h3>hollow knight</h3>
+                    <p>R$ 125</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/hollow knight silksong.avif" alt="silksong">
+                    <h3>silksong</h3>
+                    <p>R$ 9,999,999,999,999</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/god of war 1.jpg" alt="god of war 1">
+                    <h3>god of war</h3>
+                    <p> R$ 29 </p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/god of war 2.jpg" alt="god of war 2">
+                    <h3>god of war</h3>
+                    <p> R$ 29 </p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/god of war 3.jpg" alt="god of war 3">
+                    <h3>god of war</h3>
+                    <p> R$ 29 </p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/god of war 4.jpg" alt="god of war 4">
+                    <h3>god of war</h3>
+                    <p> R$ 29 </p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/god of war 5.jpg" alt="god of war 5">
+                    <h3>god of war</h3>
+                    <p> R$ 29 </p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/dragon's dogma 1.jpg" alt="dragon's dogma 1">
+                    <h3>dragon's dogma 1</h3>
+                    <p> R$ 29 </p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/dragon's dogma 2.avif" alt="dragon's dogma 2">
+                    <h3>dragon's dogma 2</h3>
+                    <p> R$ 29 </p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/red-dead-redemption-2.avif" alt="Red Dead Redemption 2">
+                    <h3>Red Dead Redemption 2</h3>
+                    <p>R$ 179</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/Sekiro Shadows Die Twice.jpg" alt="Sekiro Shadows Die Twice">
+                    <h3>Sekiro: Shadows Die Twice</h3>
+                    <p>R$ 199</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/baldurs-gate-3.avif" alt="Baldur's Gate 3">
+                    <h3>Baldur's Gate 3</h3>
+                    <p>R$ 229</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/persona5.png" alt="Persona 5 Royal">
+                    <h3>Persona 5 Royal</h3>
+                    <p>R$ 249</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="fps">
+                    <img src="imagem/battlefield2042.jpg" alt="Battlefield 2042">
+                    <h3>Battlefield 2042</h3>
+                    <p>R$ 149</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="fps">
+                    <img src="imagem/overwatch2.jpg" alt="Overwatch 2">
+                    <h3>Overwatch 2</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="aventura">
+                    <img src="imagem/zelda-totk.avif" alt="The Legend of Zelda Tears of the Kingdom">
+                    <h3>Zelda: Tears of the Kingdom</h3>
+                    <p>R$ 299</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="aventura">
+                    <img src="imagem/starfield.jpg" alt="Starfield">
+                    <h3>Starfield</h3>
+                    <p>R$ 249</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="esporte">
+                    <img src="imagem/wwe2k25.jpg" alt="WWE 2K25">
+                    <h3>WWE 2K25</h3>
+                    <p>R$ 279</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="esporte">
+                    <img src="imagem/riders-republic.jpg" alt="Riders Republic">
+                    <h3>Riders Republic</h3>
+                    <p>R$ 99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/assassins-creed-shadows.avif" alt="Assassin's Creed Shadows">
+                    <h3>Assassin's Creed Shadows</h3>
+                    <p>R$ 349</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/monster-hunter-wilds.avif" alt="Monster Hunter Wilds">
+                    <h3>Monster Hunter Wilds</h3>
+                    <p>R$ 279</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/ghost-of-tsushima.webp" alt="Ghost of Tsushima">
+                    <h3>Ghost of Tsushima</h3>
+                    <p>R$ 249</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/star-wars-jedi-survivor.jpg" alt="Star Wars Jedi Survivor">
+                    <h3>Star Wars Jedi Survivor</h3>
+                    <p>R$ 279</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/control.avif" alt="Control">
+                    <h3>Control</h3>
+                    <p>R$ 89</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/alan-wake-2.avif" alt="Alan Wake 2">
+                    <h3>Alan Wake 2</h3>
+                    <p>R$ 219</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/fallout-4.jpg" alt="Fallout 4">
+                    <h3>Fallout 4</h3>
+                    <p>R$ 79</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/skyrim.avif" alt="The Elder Scrolls V Skyrim">
+                    <h3>Skyrim</h3>
+                    <p>R$ 99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/Divinity Original Sin 1.webp" alt="Divinity Original Sin 2">
+                    <h3>Divinity Original Sin 2</h3>
+                    <p>R$ 159</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/divinity-original-sin-2.avif" alt="Divinity Original Sin 2">
+                    <h3>Divinity Original Sin 2</h3>
+                    <p>R$ 119</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/kingdom-come-deliverance.jpg" alt="Kingdom Come Deliverance">
+                    <h3>Kingdom Come Deliverance</h3>
+                    <p>R$ 129</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/kingdom-come-deliverance-2.avif" alt="Kingdom Come Deliverance II">
+                    <h3>Kingdom Come: Deliverance II</h3>
+                    <p>R$ 299</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="fps">
+                    <img src="imagem/pubg.avif" alt="PUBG Battlegrounds">
+                    <h3>PUBG Battlegrounds</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="fps">
+                    <img src="imagem/escape-from-tarkov.jpg" alt="Escape from Tarkov">
+                    <h3>Escape from Tarkov</h3>
+                    <p>R$ 229</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="fps">
+                    <img src="imagem/doom-2016.jpg" alt="DOOM 2016">
+                    <h3>DOOM (2016)</h3>
+                    <p>R$ 69</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="fps">
+                    <img src="imagem/halo-infinite.jpg" alt="Halo Infinite">
+                    <h3>Halo Infinite</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="aventura">
+                    <img src="imagem/subnautica.avif" alt="Subnautica">
+                    <h3>Subnautica</h3>
+                    <p>R$ 89</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="aventura">
+                    <img src="imagem/subnautica 2.jpg" alt="Subnautica 2">
+                    <h3>Subnautica 2</h3>
+                    <p>R$ 119</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="aventura">
+                    <img src="imagem/subnautica zero.jpg" alt="Subnautica zero">
+                    <h3>Subnautica: Below Zero </h3>
+                    <p>R$ 13o</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="aventura">
+                    <img src="imagem/stray.jpg" alt="Stray">
+                    <h3>Stray</h3>
+                    <p>R$ 119</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="aventura">
+                    <img src="imagem/sea-of-thieves.jpg" alt="Sea of Thieves">
+                    <h3>Sea of Thieves</h3>
+                    <p>R$ 149</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="aventura">
+                    <img src="imagem/grounded.avif" alt="Grounded">
+                    <h3>Grounded</h3>
+                    <p>R$ 129</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="aventura">
+                    <img src="imagem/grounded-2.jpg" alt="Grounded 2">
+                    <h3>Grounded 2</h3>
+                    <p>RR$ 199</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="esporte">
+                    <img src="imagem/motogp24.jpg" alt="MotoGP 24">
+                    <h3>MotoGP 24</h3>
+                    <p>R$ 199</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="esporte">
+                    <img src="imagem/Forza Horizon 5.jpg" alt="Forza Horizon 5">
+                    <h3>Forza Horizon 5</h3>
+                    <p>R$ 249</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="esporte">
+                    <img src="imagem/gran-turismo-7.jpg" alt="Gran Turismo 7">
+                    <h3>Gran Turismo 7</h3>
+                    <p>R$ 299</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="esporte">
+                    <img src="imagem/wrc.jpg" alt="EA Sports WRC">
+                    <h3>EA Sports WRC</h3>
+                    <p>R$ 179</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/path-of-exile.jpg" alt="Path of Exile">
+                    <h3>Path of Exile</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/diablo-1.jpg" alt="Diablo IV">
+                    <h3>Diablo I</h3>
+                    <p>R$ 55</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/diablo-2.jpg" alt="Diablo IV">
+                    <h3>Diablo II</h3>
+                    <p>R$ 180</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/diablo-3.jpg" alt="Diablo IV">
+                    <h3>Diablo III</h3>
+                    <p>R$ R$ 100</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/diablo-4.jpg" alt="Diablo IV">
+                    <h3>Diablo IV</h3>
+                    <p>R$ 349</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/diablo-5.jpg" alt="Diablo IV">
+                    <h3>Diablo immortal</h3>
+                    <p> Gratuito</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/palworld.jpg" alt="Palworld">
+                    <h3>Palworld</h3>
+                    <p>R$ 89</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/dragon-age-veilguard.jpg" alt="Dragon Age The Veilguard">
+                    <h3>Dragon Age: The Veilguard</h3>
+                    <p>R$ 299</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/gta6.jpg" alt="GTA VI">
+                    <h3>GTA VI</h3>
+                    <p>R$ 399</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/death-stranding-2.jpg" alt="Death Stranding 2">
+                    <h3>Death Stranding 2</h3>
+                    <p>R$ 349</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/black-myth-wukong.jpg" alt="Black Myth Wukong">
+                    <h3>Black Myth: Wukong</h3>
+                    <p>R$ 299</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="fps">
+                    <img src="imagem/marvel-rivals.jpg" alt="Marvel Rivals">
+                    <h3>Marvel Rivals</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="fps">
+                    <img src="imagem/the-finals.webp" alt="The Finals">
+                    <h3>The Finals</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/avowed.jpg" alt="Avowed">
+                    <h3>Avowed</h3>
+                    <p>R$ 299</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+
+
+                <div class="card" data-categoria="fps">
+                    <img src="imagem/cod-black-ops-6.jpg" alt="Call of Duty Black Ops 6">
+                    <h3>Call of Duty: Black Ops 6</h3>
+                    <p>R$ 339</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/stellar-blade.jpg" alt="Stellar Blade">
+                    <h3>Stellar Blade</h3>
+                    <p>R$ 299</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="terror">
+                    <img src="imagem/silent-hill.jpg" alt="Silent Hill">
+                    <h3>Silent Hill</h3>
+                    <p>R$ 49,99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="terror">
+                    <img src="imagem/silent-hill-2.jpg" alt="Silent Hill 2">
+                    <h3>Silent Hill 2</h3>
+                    <p>R$ 59,99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/silent-hill-2-remake.jpg" alt="Silent Hill 2 Remake">
+                    <h3>Silent Hill 2 Remake</h3>
+                    <p>R$ 279</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+
+                <div class="card" data-categoria="terror">
+                    <img src="imagem/silent-hill-3.jpg" alt="Silent Hill 3">
+                    <h3>Silent Hill 3</h3>
+                    <p>R$ 59,99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="terror">
+                    <img src="imagem/silent-hill-4-the-room.jpg" alt="Silent Hill 4 The Room">
+                    <h3>Silent Hill 4: The Room</h3>
+                    <p>R$ 59,99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="terror">
+                    <img src="imagem/silent-hill-origins.jpg" alt="Silent Hill Origins">
+                    <h3>Silent Hill Origins</h3>
+                    <p>R$ 49,99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="terror">
+                    <img src="imagem/silent-hill-homecoming.jpg" alt="Silent Hill Homecoming">
+                    <h3>Silent Hill: Homecoming</h3>
+                    <p>R$ 69,99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="terror">
+                    <img src="imagem/silent-hill-shattered-memories.jpg" alt="Silent Hill Shattered Memories">
+                    <h3>Silent Hill: Shattered Memories</h3>
+                    <p>R$ 79,99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="terror">
+                    <img src="imagem/silent-hill-downpour.jpg" alt="Silent Hill Downpour">
+                    <h3>Silent Hill: Downpour</h3>
+                    <p>R$ 89,99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="terror">
+                    <img src="imagem/silent-hill-book-of-memories.webp" alt="Silent Hill Book of Memories">
+                    <h3>Silent Hill: Book of Memories</h3>
+                    <p>R$ 39,99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="terror">
+                    <img src="imagem/silent-hill-the-short-message.jpeg" alt="Silent Hill The Short Message">
+                    <h3>Silent Hill: The Short Message</h3>
+                    <p>Gratis</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/doom-the-dark-ages.jpg" alt="DOOM The Dark Ages">
+                    <h3>DOOM: The Dark Ages</h3>
+                    <p>R$ 349</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="esporte">
+                    <img src="imagem/f1-25.jpg" alt="F1 25">
+                    <h3>F1 25</h3>
+                    <p>R$ 299</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/warhammer-space-marine-2.jpg" alt="Warhammer 40000 Space Marine 2">
+                    <h3>Warhammer 40,000: Space Marine 2</h3>
+                    <p>R$ 249</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/mafia-the-old-country.jpg" alt="Mafia The Old Country">
+                    <h3>Mafia: The Old Country</h3>
+                    <p>R$ 299</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="rpg">
+                    <img src="imagem/elden-ring-nightreign.jpg" alt="Elden Ring Nightreign">
+                    <h3>Elden Ring: Nightreign</h3>
+                    <p>R$ 199</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="aventura">
+                    <img src="imagem/Terraria.jpg" alt="Terraria">
+                    <h3>Terraria</h3>
+                    <p>R$ 32,99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/batman-arkham-asylum.jpg" alt="Batman Arkham Asylum">
+                    <h3>Batman: Arkham Asylum</h3>
+                    <p>R$ 39,99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/batman-arkham-city.jpg" alt="Batman Arkham City">
+                    <h3>Batman: Arkham City</h3>
+                    <p>R$ 49,99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/batman-arkham-origins.jpg" alt="Batman Arkham Origins">
+                    <h3>Batman: Arkham Origins</h3>
+                    <p>R$ 59,99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/batman-arkham-knight.jpg" alt="Batman Arkham Knight">
+                    <h3>Batman: Arkham Knight</h3>
+                    <p>R$ 79,99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="acao">
+                    <img src="imagem/gotham-knights.jpg" alt="Gotham Knights">
+                    <h3>Gotham Knights</h3>
+                    <p>R$ 149,99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="fps">
+                    <img src="imagem/borderlands-3.avif" alt="Borderlands 3">
+                    <h3>Borderlands 3</h3>
+                    <p>R$ 89,99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="fps">
+                    <img src="imagem/borderlands.jpg" alt="Borderlands Game of the Year">
+                    <h3>Borderlands GOTY</h3>
+                    <p>R$ 39,99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="fps">
+                    <img src="imagem/borderlands-2.jpg" alt="Borderlands 2">
+                    <h3>Borderlands 2</h3>
+                    <p>R$ 29,99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="fps">
+                    <img src="imagem/borderlands-pre-sequel.jpg" alt="Borderlands The Pre-Sequel">
+                    <h3>Borderlands: The Pre-Sequel</h3>
+                    <p>R$ 39,99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+                <div class="card" data-categoria="fps">
+                    <img src="imagem/tiny-tinas-wonderlands.jpg" alt="Tiny Tina's Wonderlands">
+                    <h3>Tiny Tina's Wonderlands</h3>
+                    <p>R$ 119,99</p>
+                    <button type="button" class="btn-comprar">Comprar</button>
+                </div>
+
+            </div>
+            <p class="no-results">Nenhum jogo encontrado. Tente outro filtro ou palavra-chave.</p>
+        </main>
+    </div>
+
+    <a href="#top" class="seta">
+        &#8593;
+    </a>
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h3>SENAI Pedro E-commerce</h3>
+                <p>Sua loja de jogos digitais com os melhores preços e promoções.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Links Úteis</h3>
+                <a href="#">Sobre Nós</a>
+                <a href="#">Termos de Uso</a>
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Suporte</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Categorias</h3>
+                <a href="#" class="categoria" data-categoria="acao">Ação</a>
+                <a href="#" class="categoria" data-categoria="rpg">RPG</a>
+                <a href="#" class="categoria" data-categoria="fps">FPS</a>
+                <a href="#" class="categoria" data-categoria="esporte">Esportes</a>
+                <a href="#" class="categoria" data-categoria="todos">TODOS</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contato</h3>
+                <p>📧 contato@gamerstore.com</p>
+                <p>📱 (11) 99999-9999</p>
+                <p>💬 WhatsApp</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 SENAI Pedro E-commerce - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

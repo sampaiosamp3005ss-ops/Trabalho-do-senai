@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1b2838;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+/* HEADER */
+
+header {
+    background-color: #171a21;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 50px;
+}
+
+.logo img {
+    width: 60px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* MAIN */
+
+.pagina-jogo {
+    width: 90%;
+    margin: 30px auto;
+    /* background-image: url(imagem/ChatGPT\ Image\ 6\ de\ abr.\ de\ 2026\,\ 08_39_40\ 1.png); */
+    background-position: center;
+    opacity: 1.5;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+/* caminho */
+
+.info {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    background-color: #293c54;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.info a {
+    text-decoration: none;
+    color: #66c0f4;
+}
+
+/* titulo */
+
+.titulo {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+/* estrutura principal */
+
+.conteudo-jogo {
+    display: flex;
+    gap: 20px;
+}
+
+/* banner grande */
+
+.banner {
+    flex: 2;
+
+}
+
+.banner img {
+    width: 508;
+    height: 400px;
+    border-radius: 5px;
+}
+
+.banner iframe {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+}
+
+/* lateral */
+
+.sidebar {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.capa {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.descricao {
+    color: #c7d5e0;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.detalhes p {
+    margin-bottom: 10px;
+    color: #acdbf5;
+}
+
+.detalhes span {
+    color: #556772;
+}
+
+/* miniaturas */
+
+.miniaturas {
+    display: flex;
+    gap: 10px;
+    padding-top: 20px;
+    margin-top: 5px ;
+    flex-wrap: wrap;
+    border-top: 5px solid #13415c;
+    border-radius: 10% ;
+}
+
+.miniaturas img {
+    width: 160px;
+    height: 90px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.miniaturas img:hover {
+    border: 2px solid #00f0ff;
+    transform: scale(1.05);
+}
+
+.banner img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.infop{
+    min-width: 100%;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-bottom: 5px solid #13415c ;
+    color: #00f0ff;
+    
+}
+.avaliacao {
+    font-size: 40px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.estrela {
+    color: gray;
+    transition: 0.2s;
+    cursor: pointer ;
+    font-size: 30px;
+}
+
+.estrela.ativa {
+    color: gold;
+}

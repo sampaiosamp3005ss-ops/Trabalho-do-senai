@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="intro.css">
+    <link rel="shortcut icon" href="pager/imagem/ChatGPT Image 6 de abr. de 2026, 08_39_40 .ico" type="image/x-icon">
+    <title style="display: none;">Entrada</title>
+</head>
+
+<body>
+    <section>
+        <div class="wrapper-abas">
+            
+            
+            <div class="container" id="containerCadastro">
+                <h2>Criar Conta</h2>
+                <p style="visibility: hidden; margin-bottom: -10px;">.</p>
+                <form id="formCadastro">
+                    <div class="input-grupo">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome" required>
+                    </div>
+                    
+                    <div class="input-grupo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                    </div>
+                    
+                    <div class="input-grupo">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" placeholder="Mínimo 6 caracteres" required>
+                    </div>
+                    
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+            
+            <div class="container escondido" id="containerLogin">
+                <h2>Acessar Conta <br> (Login)</h2>
+                <form id="formLogin">
+                    <div class="input-grupo">
+                        <label for="loginEmail">E-mail</label>
+                        <input type="email" id="loginEmail" placeholder="Digite seu e-mail" required>
+                    </div>
+                    
+                    <div class="input-grupo">
+                        <label for="loginSenha">Senha</label>
+                        <input type="password" id="loginSenha" placeholder="Digite sua senha" required>
+                    </div>
+                    
+                    <button type="submit">Entrar</button>
+                </form>
+            </div>
+            
+            <p id="mensagem"></p>
+         
+            <div class="box-botoes">
+                <button id="btnAbaCadastro" class="aba-ativa">Criar Conta</button>
+                <button id="btnAbaLogin">Acessar Conta</button>
+            </div>
+        </div>
+    </section>
+    <script src="intro.js"></script>
+</body>
+
+</html>
