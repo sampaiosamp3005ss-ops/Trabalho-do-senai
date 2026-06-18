@@ -588,6 +588,7 @@ nav a:hover,
 }
 
 .no-results {
+    align-items: center;
     margin-top: 24px;
     padding: 20px;
     border-radius: 18px;
